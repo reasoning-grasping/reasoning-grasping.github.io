@@ -42,49 +42,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <a class="navbar-item" href="project1.html">Project 1</a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -143,13 +100,22 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img id="teaser" src="./static/images/first_figure.png" alt="Teaser Image" height="100%">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">We integrate the reasoning abilities of multi-modal Large Language Models with robotic grasping. The resulting model interprets complex and implicit instructions, accurately predicts robotic grasping poses for target objects or specific parts within cluttered environments, and supports multi-round conversations with users. In the textual output from the model, the grasping target is indicated by two special tokens SPT, as demonstrated in the figure. The output grasp poses are visualized in the images with rectangles.
-      </h2>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h2 class="title">1-min Presentation</h2> -->
+          <video width="100%" controls>
+            <source src="./static/videos/corl-2024-reasoning-grasping_with_subtitles.mp4" type="video/mp4">
+            <div class="content justified-text">
+              <p>
+                1-min Presentation
+              </p>
+            </div>
+          </video>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -158,11 +124,10 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content">
+        <div class="content justified-text">
           <p>
             Despite significant progress in robotic systems for operation within human-centric environments, existing models still heavily rely on explicit human commands to identify and manipulate specific objects. This limits their effectiveness in environments where understanding and acting on implicit human intentions are crucial. In this study, we introduce a novel task: reasoning grasping, where robots need to generate grasp poses based on indirect verbal instructions or intentions. 
             To accomplish this, we propose an end-to-end reasoning grasping model that integrates a multimodal Large Language Model (LLM) with a vision-based robotic grasping framework.
@@ -172,16 +137,139 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
 </section>
 
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivations and Application Scenarios</h2>
+        <div class="content justified-text">
+          <p>
+            Motivations 
+            <br>
+            Advance robotic systems should not only understand direct human commands but to also possess the reasoning capability to interpret implicit instructions. These implicit instructions can provide a general description of users’ needs, requiring the robot to infer the grasping target on its own, without explicitly naming the object.
+            <br><br>
+            Application Scenarios
+            <br>
+1. Users cannot visually confirm the robot’s surroundings: For example, blind people can
+instruct the robot to “find a sweater in a warm color that matches the pants”. The robot could
+also be asked to “find something to hold these papers together”, where it might choose from
+a stapler, paper clips, or binder clips based on availability.
+<br>
+2. Tasks that require internal knowledge for decision making: Robots can utilize their internal
+knowledge for tasks like sorting in recycling facilities. They could be instructed to “sort
+materials that are recyclable and compostable”, identifying items based on texture and
+material type, which facilitates sorting without the need to know whether the objects are
+recyclable or not.
+<br>
+3. Naming objects is impractical or complex: In some situations, explicitly naming objects is
+impractical or the names are complex and difficult to remember. For instance, telling a robot, “I
+need my morning medicine”, allows the robot to use its routine knowledge to fetch the correct
+medication without the user needing to recall specific drug names, which are usually long and
+complex.
+<br>
+4. Managing multiple items: Explicitly naming multiple objects can be cumbersome and
+inefficient. In emergency medical situations, a medical robot might be instructed to “gather all
+items necessary for suturing wounds”. It would need to discern which tools and supplies are
+relevant, such as needles, thread, and antiseptics, based on the medical context provided. For
+general tidying tasks in home organization, a home robot could be instructed with phrases like
+“The living room is messy, tidy up by picking up toys”, allowing the robot to identify and collect
+toys without naming each item individually (e.g., teddy bear, toy train, etc.).
+<br>
+
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<section class="hero teaser section-spacing">
+  <div class="container is-max-desktop">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title">Introduction</h2>
+            <img id="teaser" src="./static/images/first_figure.png" alt="Teaser Image" height="100%">
+            <div class="content justified-text">
+              <p>
+                Our contributions are: 1.Introduce Reasoning Grasping - Generating grasping poses from implicit instructions. 2.Propose a multi-modal large language model that can finish the reasoning grasping task. 3.Develop a reasoning grasping dataset that incorporates implicit instructions for both objectlevel and part-level grasping.
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="hero teaser section-spacing">
+  <div class="container is-max-desktop">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title">Framework</h2>
       <img id="teaser" src="./static/images/revise_framework.png" alt="Teaser Image" height="100%">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Framework of the proposed reasoning grasping model. This model processes visual images v and textual instructions t to output the grasp pose g for the specified target object or part. The embeddings of the grasp target are passed to the grasping module for grasping poses detection.
-      </h2>
+      <div class="content justified-text">
+        <p>
+          Framework of the proposed reasoning grasping model. This model processes visual images v and textual instructions t to output the grasp pose g for the specified target object or part. The embeddings of the grasp target are passed to the grasping module for grasping poses detection.
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser section-spacing">
+  <div class="container is-max-desktop">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title">Reasoning Grasping Dataset</h2>
+      <img id="teaser" src="./static/images/dataset_example1.jpg" alt="Teaser Image" height="100%">
+      <div class="content ">
+        <p>
+          We extend the GraspNet-1B dataset with reasoning instructions as well as object parts grasping annotations.
+        </p>
+      </div>
+      <img id="teaser" src="./static/images/different_datasets.png" alt="Teaser Image" height="100%">
+      <div class="content ">
+        <p>
+          Comparison with different datasets
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser section-spacing">
+  <div class="container is-max-desktop">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title">Experiments</h2>
+      <img id="teaser" src="./static/images/experiments_on_dataset.png" alt="Teaser Image" height="100%">
+      <div class="content ">
+        <p>
+          Grasp prediction accuracy on the reasoning grasping dataset.
+        </p>
+      </div>
+      <img id="teaser" src="./static/images/real_exp.jpg" alt="Teaser Image" height="100%">
+      <img id="teaser" src="./static/images/real_exp_results.png" alt="Teaser Image" height="100%">
+      <div class="content ">
+        <p>
+          Comparison with different datasets
+        </p>
+      </div>
+      </div>
     </div>
   </div>
 </section>
